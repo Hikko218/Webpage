@@ -1,0 +1,342 @@
+/* ====== Global Styles ====== */
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  font-size: 2rem;
+  color: #000dbc;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== Container ====== */
+#home {
+  background-color: black;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ====== Navigation ====== */
+.topdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.topmenu {
+  font-size: clamp(14px, 2vw, 18px);
+  color: #000dbc;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.topmenu:hover {
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #000dbc;
+}
+
+/* ====== Profile & Contact Info ====== */
+.profile_name {
+  color: #000dbc;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact_info {
+  font-size: 15px;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.contact_info img {
+  width: 30px;       
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ====== Profile Section ====== */
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.profile_image {
+  max-width: 200px;
+  border-radius: 20px;
+}
+
+/* ====== About Me ====== */
+#about-me h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #000dbc;
+  text-align: center;
+  margin: 0;
+}
+
+#about-me p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
+/* ====== Skills Section ====== */
+.all_skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto; 
+}
+
+.skill {
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  width: 180px;
+  box-shadow: 5px 5px 20px blue;
+}
+
+.skill img {
+  height: 35px;
+  margin-bottom: 0.5rem;
+}
+
+.skills h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.skills p {
+  font-size: 0.9rem;
+  color: gray;
+  margin: 0;
+}
+
+/* ====== Projects ====== */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 0 10px #000dbc;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #000dbc;
+}
+
+.project-card ul {
+  list-style-position: inside; /* <-- wichtig für mittige Punkte */
+  padding: 0;
+  margin: 1rem auto 0;
+  text-align: left;
+}
+
+/* ====== Recommendations ====== */
+.all_recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.recommendation {
+  background-color: #fff;
+  color: #000;
+  font-style: italic;
+  padding: 1rem;
+  border-radius: 11px;
+  box-shadow: 5px 5px 20px blue;
+  width: 300px;
+}
+
+.recommendation span {
+  color: #000dbc;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', serif;
+}
+
+
+/*Contact Section */
+#contact {
+  background-color: #000;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* ====== Form Section ====== */
+
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: thin solid #000dbc;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  box-shadow: 0 0 20px #000dbc;
+  width: 100%;
+  max-width: 600px;
+  background-color: black;
+}
+legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000dbc;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ====== Buttons ====== */
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #000dbc;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #000dbc;
+  color: white;
+}
+
+/* ====== Scroll to Top ====== */
+.iconbutton {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+  box-shadow: 0px 0px 40px blue;
+}
+
+.iconbutton img {
+  width: 35px;
+  height: 35px; 
+}
+
+/* ====== Popup ====== */
+.popup {
+  width: 90%;
+  max-width: 400px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  visibility: hidden;
+  box-shadow: 0 0 40px blue;
+  padding: 2rem;
+}
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+  .topdiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-section {
+    flex-direction: column;
+  }
+
+  .profile_image {
+    max-width: 120px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .skill {
+    width: 80%;
+  }
+}

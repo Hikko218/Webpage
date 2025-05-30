@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heiko Ries Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="home">
+    <nav class="topdiv">
+      <a class="topmenu" href="#about-me">About</a>
+      <a class="topmenu" href="#skills">Skills</a>
+      <a class="topmenu" href="#projects">Projects</a>
+      <a class="topmenu" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="profile-section">
+      <img src="html_finalprojimages/profil.jpeg" alt="Profilbild Heiko Ries" class="profile_image">
+      <div>
+        <h1 class="profile_name">Hi, I'm <span style="color:#000dbc">Heiko Ries</span>! 👋</h1>
+        <div class="contact_info">
+          <span><img src="html_finalprojimages/envelope.png" alt="E-Mail"> heiko@mail.de</span>
+          <span><img src="html_finalprojimages/phone.png" alt="Telefon"> +49 123 456789</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-me">
+      <h1>About Me</h1>
+      <p>I'm on my way to become an IBM Backend Developer with a passion for full-stack development and clean code.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png" alt="HTML">
+          <h6>HTML</h6>
+          <p>Semantic, accessible markup</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/css_icon.png" alt="CSS">
+          <h6>CSS</h6>
+          <p>Flexbox, Grid, Responsive Design</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg" alt="JavaScript">
+          <h6>JavaScript</h6>
+          <p>DOM, Events, ES6+</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Feedback Website</h3>
+          <ul>
+            <li>Frontend with HTML/CSS/JS</li>
+            <li>Dynamic comment section (client-side only)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Send me a message</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button onclick="addRecommendation()" type="submit">Send</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="iconbutton" onclick="scrollToTop()">
+      <img src="html_finalprojimages/home.png" alt="Scroll to top">
+    </div>
+  </footer>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+
+</html>
