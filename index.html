@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- Header section with navigation links to different sections of the portfolio page -->
   <header id="home">
     <nav class="topdiv">
       <a class="topmenu" href="#about-me">About</a>
@@ -17,6 +18,8 @@
       <a class="topmenu" href="#contact">Contact</a>
     </nav>
   </header>
+
+  <!-- Main content of the portfolio page with profile section, about me, skills, projects, and contact form -->
 
   <main>
     <section class="profile-section">
@@ -30,10 +33,14 @@
       </div>
     </section>
 
+    <!--About Me section with a brief introduction-->
+
     <section id="about-me">
       <h1>About Me</h1>
       <p>I'm on my way to become an IBM Backend Developer with a passion for full-stack development and clean code.</p>
     </section>
+
+    <!--Skills section with three skill cards-->
 
     <section id="skills">
       <h2>Skills</h2>
@@ -56,18 +63,33 @@
       </div>
     </section>
 
+    <!--Projects section with two project cards-->
+
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-container">
         <div class="project-card">
-          <h3>Feedback Website</h3>
+          <h3>Portfolio Website</h3>
           <ul>
             <li>Frontend with HTML/CSS/JS</li>
-            <li>Dynamic comment section (client-side only)</li>
+            <li>Comment section (client-side only)</li>
           </ul>
         </div>
       </div>
+
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <ul>
+            <li>Frontend with HTML/CSS/JS</li>
+            <li>API integration for weather data</li>
+          </ul>
+        </div>
+
+
     </section>
+
+    <!-- Contact section with a form to send messages -->
 
     <section id="contact">
       <h2>Contact Me</h2>
@@ -89,17 +111,18 @@
     </section>
   </main>
 
+  <!-- Footer section with a button to scroll back to the top of the page -->
   <footer>
-    <div class="iconbutton" onclick="scrollToTop()">
-      <img src="html_finalprojimages/home.png" alt="Scroll to top">
+    <p>&copy; 2023 Heiko Ries. All rights reserved.</p>
+
+   <div class="iconbutton">
+      <a href="#home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg> 
+      </a>
     </div>
   </footer>
-
-  <script>
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
 </body>
 
 </html>
