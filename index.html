@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heiko Ries Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
 </head>
 
 <body>
@@ -27,8 +28,8 @@
       <div>
         <h1 class="profile_name">Hi, I'm <span style="color:#000dbc">Heiko Ries</span>! 👋</h1>
         <div class="contact_info">
-          <span><img src="html_finalprojimages/envelope.png" alt="E-Mail"> heiko@mail.de</span>
-          <span><img src="html_finalprojimages/phone.png" alt="Telefon"> +49 123 456789</span>
+          <span><img src="html_finalprojimages/envelope.png" alt="E-Mail"> On Request</span>
+          <span><img src="html_finalprojimages/phone.png" alt="Telefon"> On Request</span>
         </div>
       </div>
     </section>
@@ -72,7 +73,7 @@
           <h3>Portfolio Website</h3>
           <ul>
             <li>Frontend with HTML/CSS/JS</li>
-            <li>Comment section (client-side only)</li>
+            <li>Feedback section (client-side only)</li>
           </ul>
         </div>
       </div>
@@ -91,25 +92,47 @@
 
     <!-- Contact section with a form to send messages -->
 
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          There may be future recommendations here
+          <span>&#8221;</span>
+        </div>
+        
+        
+      </div>
+    </section>
+
+
+
     <section id="contact">
-      <h2>Contact Me</h2>
       <form action="#" method="post">
         <fieldset>
-          <legend>Send me a message</legend>
+          <legend>Recommendations</legend>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
 
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="new_recommendation">Message:</label>
+          <textarea id="new_recommendation" name="message" rows="5" required></textarea>
 
           <button onclick="addRecommendation()" type="submit">Send</button>
         </fieldset>
       </form>
     </section>
   </main>
+
+  <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3>Thanks for leaving a recommendation!"</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
 
   <!-- Footer section with a button to scroll back to the top of the page -->
   <footer>

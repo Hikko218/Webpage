@@ -1,6 +1,8 @@
 function addRecommendation() {
   // Get the message of the new recommendation
   let recommendation = document.getElementById("new_recommendation");
+  let email = document.getElementById("email");
+  let name = document.getElementById("name");
   // If the user has left a recommendation, display a pop-up
   if (recommendation.value != null && recommendation.value.trim() != "") {
     console.log("New recommendation added");
@@ -15,13 +17,15 @@ function addRecommendation() {
     
     // Reset the value of the textarea
     recommendation.value = "";
+    email.value = "";
+    name.value = "";
   }
 }
 
 function showPopup(bool) {
   if (bool) {
-    document.getElementById('popup').style.visibility = 'visible'
+    document.getElementById('popup').style.visibility = 'visible';
   } else {
-    document.getElementById('popup').style.visibility = 'hidden'
+    document.getElementById('popup').style.visibility = 'hidden';
   }
 }
