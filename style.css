@@ -1,92 +1,130 @@
+
 /* ====== Global Styles ====== */
-body {
+
+html, body {
+  min-height: 100%; 
+  padding:0;
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #000;
-  color: white;
-  line-height: 1.6;
-  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-image: url("html_finalprojimages/background_img.jpg");
+  background-size: cover;       
+  background-position: center;   
+  background-repeat: no-repeat;                           
 }
 
-h2, h3 {
-  font-size: 2rem;
-  color: #000dbc;
-  text-align: center;
-  margin-bottom: 1rem;
+body {
+  display: flex;                                /* Flexbox for layout */
+  flex-direction: column;                       /* Column layout */
+  position: relative;                           /* Relative positioning for overlay */
+}
+
+main {
+    margin-top: 50px;                           /*Content after Header*/
+    flex: 1;                                    /* Allow main to grow and fill available space */
+    min-height: 1000px;                         /* Ensure main has a minimum height */
+    
+}
+
+.overlay {
+  position: fixed;                              /* Fixed position to cover the entire viewport */
+  top: 0;                                       /* Start from the top */   
+  left: 0;                                      /* Start from the left */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); 
+  z-index: 0;                                   /* Ensure it is behind other content */
 }
 
 
-img {
-  max-width: 100%;
-  height: auto;
+/* Sidebar*/
+
+.sidebar {
+    position: fixed;
+    top: 50px;                                              
+    left: -20px;                                             
+    width: 100px;                                           
+    height: calc(100% - 50px);                                                                               
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }
 
-/* ====== Container ====== */
-#home {
-  background-color: black;
-  padding: 2rem 1rem;
-  max-width: 960px;
-  margin: 0 auto;
+.sidebar-separator {
+    width: 3px;
+    height: 200px; 
+    background-color: aliceblue;
+    border: none;
+    border-radius: 10%;
+    margin-top: 70px;
+    margin-bottom: 60px;  
 }
 
-/* ====== Navigation ====== */
+.icon_sidebar {
+    max-height: 30px;
+    object-fit: cover;
+    border-radius: 50%;   
+}
+
+/* ====== Navigation Header====== */
+
+#navdiv {
+  display: flex;
+  justify-content: center;             
+  align-items: center;
+  background-color:  rgba(0, 0, 0, 0.5);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;                               /* Header height */
+  width: 100%;
+  z-index: 1000;
+}
+
 .topdiv {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
-  padding: 1rem 0;
 }
 
 .topmenu {
-  font-size: clamp(14px, 2vw, 18px);
-  color: #000dbc;
-  padding: 0.5rem 1rem;
+  font-size: 20px;
+  color: aliceblue;
+  font-weight: bold;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
   transition: 0.3s;
 }
 
 .topmenu:hover {
   text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid #000dbc;
-}
-
-/* ====== Profile & Contact Info ====== */
-.profile_name {
-  color: #000dbc;
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.contact_info {
-  font-size: 15px;
-  color: #ccc;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem;
-}
-
-.contact_info img {
-  width: 30px;       
-  height: auto;
-  margin-right: 10px;
-  vertical-align: middle;
+  color: rgb(7, 131, 240);
+  cursor: default;
 }
 
 /* ====== Profile Section ====== */
+
+#about-me {
+  display: flex;
+  align-items: center;
+  background-color:  rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin-right: auto;
+  color: aliceblue;
+  box-shadow: 5px 5px 20px blue;
+}
+
+.about-me-text {
+  margin-left: 1rem;
+}
+
 .profile-section {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin: 2rem auto;
+  margin-top: 35px;
+  margin-left: 60px;
 }
 
 .profile_image {
@@ -94,48 +132,50 @@ img {
   border-radius: 20px;
 }
 
-/* ====== About Me ====== */
-#about-me h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: #000dbc;
-  text-align: center;
-  margin: 0;
-}
-
-#about-me p {
-  font-size: 1.1rem;
-  text-align: center;
-  color: whitesmoke;
-}
-
 /* ====== Skills Section ====== */
 .all_skills {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center; 
   justify-content: center;
   gap: 2rem;
   margin: 2rem auto; 
-}
-
-.skill {
-  background-color: whitesmoke;
-  color: black;
-  border-radius: 6px;
-  padding: 1rem;
-  text-align: center;
-  width: 180px;
+  background-color:  rgba(0, 0, 0, 0.5);
+  max-width:1000px;
+  border-radius: 20px;
   box-shadow: 5px 5px 20px blue;
 }
 
-.skill img {
-  height: 35px;
-  margin-bottom: 0.5rem;
+#skills_header {
+    color:aliceblue;
+    font-size: 30px;
+    text-align: center;
+    width: 180px;
+    flex-shrink: 0;
 }
 
-.skills h6 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0.5rem 0 0.3rem;
+.skill {
+  background-color: (0, 0, 0, 0.5);
+  color: aliceblue;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 5px 5px 20px blue;
+  flex: 1 1 180px;
+  min-width: 120px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.skill img {
+  height: 35px;
+  width: 35px; 
+  object-fit: contain; 
+  margin-bottom: 0.5rem;
 }
 
 .skills p {
@@ -275,27 +315,6 @@ button:hover {
   color: white;
 }
 
-/* ====== Scroll to Top ====== */
-.iconbutton {
-  width: 48px;
-  height: 48px;
-  border-radius: 100%;
-  background-color: #000dbc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  right: 3%;
-  bottom: 3%;
-  cursor: pointer;
-  box-shadow: 0px 0px 40px blue;
-}
-
-.iconbutton img {
-  width: 35px;
-  height: 35px; 
-}
-
 /* ====== Popup ====== */
 .popup {
   width: 90%;
@@ -310,6 +329,27 @@ button:hover {
   visibility: hidden;
   box-shadow: 0 0 40px blue;
   padding: 2rem;
+}
+
+/* footer*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:35px;
+    color:aliceblue;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    }
+
+#copyright {
+    font-size: 14px;
+    padding: 0px;
+    display: flex;
+    align-items: center;      
+    justify-content: center;
+    font-weight: bold;    
 }
 
 /* ====== Responsive Styles ====== */

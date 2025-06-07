@@ -10,12 +10,18 @@
 </head>
 
 <body>
+
+  <!--overlay-->
+
+  <div class="overlay"></div>
+
   <!-- Header section with navigation links to different sections of the portfolio page -->
-  <header id="home">
+
+  <header id="navdiv">
     <nav class="topdiv">
-      <a class="topmenu" href="#about-me">About</a>
-      <a class="topmenu" href="#skills">Skills</a>
+      <a class="topmenu" href="#about-me">About-Me</a>
       <a class="topmenu" href="#projects">Projects</a>
+      <a class="topmenu" href="#recommendations">Reviews</a>
       <a class="topmenu" href="#contact">Contact</a>
     </nav>
   </header>
@@ -24,28 +30,23 @@
 
   <main>
     <section class="profile-section">
+      <div id="about-me">
       <img src="html_finalprojimages/profil.JPEG" alt="Profilbild Heiko Ries" class="profile_image">
-      <div>
-        <h1 class="profile_name">Hi, I'm <span style="color:#000dbc">Heiko Ries</span>! 👋</h1>
-        <div class="contact_info">
-          <span><img src="html_finalprojimages/envelope.png" alt="E-Mail"> On Request</span>
-          <span><img src="html_finalprojimages/phone.png" alt="Telefon"> On Request</span>
+        <div class="about-me-text">
+        <h1 >Hi, I'm Heiko Ries</h1>
+        <p>I'm on my way to become an IBM Backend Developer with a passion for full-stack development and clean code.</p> 
         </div>
       </div>
-    </section>
-
-    <!--About Me section with a brief introduction-->
-
-    <section id="about-me">
-      <h1>About Me</h1>
-      <p>I'm on my way to become an IBM Backend Developer with a passion for full-stack development and clean code.</p>
     </section>
 
     <!--Skills section with three skill cards-->
 
     <section id="skills">
-      <h2>Skills</h2>
       <div class="all_skills">
+        <div id="skills_header">
+        <h2>Skills</h2>
+        </div> 
+        
         <div class="skill">
           <img src="html_finalprojimages/html5.png" alt="HTML">
           <h6>HTML</h6>
@@ -66,7 +67,7 @@
 
     <!--Projects section with two project cards-->
 
-    <section id="projects">
+    <section id="projects" style="display: none;">
       <h2>Projects</h2>
       <div class="projects-container">
         <div class="project-card">
@@ -93,7 +94,7 @@
     <!-- Contact section with a form to send messages -->
 
     <!-- Recommendations -->
-    <section id="recommendations">
+    <section id="recommendations" style="display: none;">
       <h2>Recommendations</h2>
       <div style="clear:both;"></div>
       <div class="all_recommendations" id="all_recommendations">
@@ -109,7 +110,7 @@
 
 
 
-    <section id="contact">
+    <section id="contact" style="display: none;">
       <form action="#" method="post">
         <fieldset>
           <legend>Recommendations</legend>
@@ -126,6 +127,23 @@
         </fieldset>
       </form>
     </section>
+   
+    <!--Sidebar-->
+   
+    <section id="sidebarContent">
+        <aside class="sidebar">
+          <hr class="sidebar-separator">
+          <a href="https://x.com" target="_blank">
+          <img src="html_finalprojimages/x_icon.png" class="icon_sidebar" alt="plain_icon"/></a> <br>
+          <a href="https://youtube.com" target="_blank">
+          <img src="html_finalprojimages/youtube_icon.png" class="icon_sidebar" alt="plain_icon"/></a><br>
+          <a href="https://instagram.com" target="_blank">
+          <img src="html_finalprojimages/instagram_icon.png" class="icon_sidebar" alt="plain_icon"/></a><br>
+          <a href="https://facebook.com" target="_blank">
+          <img src="html_finalprojimages/facebook_icon.png" class="icon_sidebar" alt="plain_icon"/></a>
+        </aside>
+    </section>
+  
   </main>
 
   <div class="popup" id="popup" class="flex_center">
@@ -135,16 +153,9 @@
     </div>
 
   <!-- Footer section with a button to scroll back to the top of the page -->
-  <footer>
-    <p>&copy; 2023 Heiko Ries. All rights reserved.</p>
 
-   <div class="iconbutton">
-      <a href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg> 
-      </a>
-    </div>
+  <footer>
+    <p id="copyright">&copy; 2023 Heiko Ries. All rights reserved.</p>
   </footer>
 </body>
 
