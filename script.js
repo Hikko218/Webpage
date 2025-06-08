@@ -12,44 +12,66 @@ function showSection(sectionId) {
 
  // addRecommendation function
 
-function addRecommendation() {
+function addReview(event) {
+  event.preventDefault(); // verhindert das automatische Absenden der Seite
 
   // Get the message of the new recommendation
 
-  let recommendation = document.getElementById("new_recommendation");
+  let review = document.getElementById("new_review");
   let email = document.getElementById("email");
   let name = document.getElementById("name");
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;               // valid email test const
 
-  // If the user has left a recommendation, display a pop-up
+  // If the user has left a review, display a pop-up
 
-  if (recommendation.value != null && recommendation.value.trim() != "") {
-    console.log("New recommendation added");
-    showPopup(true);
+  if (
+    review.value.trim() !== "" &&                       // valid input test 
+    email.value.trim() !== "" &&
+    emailPattern.test(email.value.trim()) &&
+    name.value.trim() !== "") 
+    {
+    console.log("New review added");
+    showPopupSuccess(true);
 
     // Create a new 'recommendation' element and set it's value to the user's message
 
     var element = document.createElement("div");
-    element.setAttribute("class","recommendation");
-    element.innerHTML = "\<span\>''\</span\>" + recommendation.value + "\<span\>''\</span\>";
+    element.setAttribute("class","review");
+    element.innerHTML = "\<span\>''\</span\>" + review.value + "\<span\>''\</span\>";
 
     // Add this element to the end of the list of recommendations
 
-    document.getElementById("all_recommendations").appendChild(element); 
+    document.getElementById("all_reviews").appendChild(element); 
     
     // Reset the value of the textarea
 
-    recommendation.value = "";
+    review.value = "";
     email.value = "";
-    name.value = "";
-  }
+    name.value = ""; 
+    }
+  else {
+    console.log("No valid input");
+    showPopupError(true);
+
+    }
 }
 
-    // popup function
+    // popup function success
 
-function showPopup(bool) {
+function showPopupSuccess(bool) {
   if (bool) {
-    document.getElementById('popup').style.visibility = 'visible';
+    document.getElementById('popup-success').style.visibility = 'visible';
   } else {
-    document.getElementById('popup').style.visibility = 'hidden';
+    document.getElementById('popup-success').style.visibility = 'hidden';
   }
 }
+
+  // popup function error
+function showPopupError(bool) {
+  if (bool) {
+    document.getElementById('popup-error').style.visibility = 'visible';
+  } else {
+    document.getElementById('popup-error').style.visibility = 'hidden';
+  }
+}
+

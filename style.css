@@ -152,6 +152,8 @@ main {
   max-width:1000px;
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgb(7, 131, 240);
+  min-height: 200px;
+  min-width: 800px;
 }
 
 #skills_header {
@@ -226,31 +228,116 @@ main {
   text-align: left;
 }
 
-/* ====== Recommendations ====== */
+/* ====== Reviews ====== */
+
+#reviews {
+  display: flex;
+  justify-content: center;
+}
+
 .all_reviews {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: center;
   padding: 1rem;
   gap: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .review {
-  background-color: #fff;
-  color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
   font-style: italic;
   padding: 1rem;
   border-radius: 11px;
-  box-shadow: 5px 5px 20px blue;
-  width: 300px;
+  box-shadow: 5px 5px 20px rgb(7, 131, 240);
+  width: 250px;
 }
 
 .review span {
-  color: #000dbc;
+  color: aliceblue;;
   font-size: 1.2rem;
   font-family: 'Times New Roman', serif;
 }
 
+/*Review input */
+
+#review-input-form {
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+  margin-top: 15rem;
+  z-index: 1;
+  
+}
+.review-input-form legend {
+  font-size: 25px;
+}
+
+
+.review-input-form fieldset {
+  display:flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 500px;
+  max-height: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 20px rgb(7, 131, 240);
+  border-radius: 5px;
+  border:none;
+  color:aliceblue;
+}
+
+.review-input-form input {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 15px;
+  max-height: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(7, 131, 240);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color:aliceblue;
+}
+
+.review-input-form textarea {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 100px;
+  max-height: 200px;
+  font-size: 14px;
+  resize: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(7, 131, 240);
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color:aliceblue;
+}
+
+input:invalid {
+  /* Standard: rote Umrandung, kannst du anpassen */
+  border-color: #e74c3c;
+}
+
+input:invalid:focus {
+  /* Optional: beim Fokus weniger auffällig */
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+input:invalid ~ .validation-message {
+  opacity: 0.3;           /* Sichtbarkeit stark reduziert */
+  pointer-events: none;    /* Nicht anklickbar */
+  position: absolute;      /* Kann im Hintergrund liegen */
+  z-index: 0;              /* Hinter anderen Elementen */
+}
 
 /*Contact Section */
 #contact {
@@ -263,74 +350,31 @@ main {
 }
 
 
-/* ====== Form Section ====== */
-
-
-form {
-  display: flex;
-  justify-content: center;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: thin solid #000dbc;
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 2rem auto;
-  box-shadow: 0 0 20px #000dbc;
-  width: 100%;
-  max-width: 600px;
-  background-color: black;
-}
-legend {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #000dbc;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.6rem;
-  margin: 0.5rem 0;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: none;
-}
-
 /* ====== Buttons ====== */
 button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+  margin-top: 10px;
+  padding: 0.3rem 1.2rem;
   font-size: 1rem;
+  font-weight: bold;
   border-radius: 6px;
-  border: 1px solid #000dbc;
-  background-color: #fff;
-  color: black;
+  background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border:none;
+  color: rgb(7, 131, 240);
+  box-shadow: 0px 0px 10px rgb(7, 131, 240);
 }
 
 button:hover {
-  background-color: #000dbc;
-  color: white;
+  background-color: aliceblue;
 }
 
 /* ====== Popup ====== */
 .popup {
+  position: relative;
   width: 90%;
   max-width: 400px;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   position: fixed;
   top: 50%;
@@ -340,6 +384,14 @@ button:hover {
   visibility: hidden;
   box-shadow: 0 0 40px blue;
   padding: 2rem;
+  z-index: 1000;
+  color:aliceblue;
+}
+
+.popup_icon {
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* footer*/
