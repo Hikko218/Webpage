@@ -2,7 +2,7 @@
 // Nav-bar and section management 
 
 function showSection(sectionId) {
-  const sections = document.querySelectorAll("#about-me, #projects, #reviews, #contact");
+  const sections = document.querySelectorAll("#about-me, #projects, #reviews, #contact, #home");
   sections.forEach(section => section.style.display = "none");
   
   const active = document.getElementById(sectionId);

@@ -31,7 +31,7 @@ main {
   left: 0;                                      /* Start from the left */
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2); 
+  background: rgba(0, 0, 0, 0.4); 
   z-index: 0;                                   /* Ensure it is behind other content */
 }
 
@@ -101,7 +101,49 @@ main {
   cursor: default;
 }
 
-/* ====== Profile Section ====== */
+/* ====== Home Section====== */
+
+.home-section {
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  color: white;
+  padding: 0 20px;
+  margin-top: 300px;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  color: rgb(7, 131, 240);
+}
+
+.home-content p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.home-content .btn {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(7, 131, 240);
+  box-shadow: 0px 0px 20px rgb(7, 131, 240);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-content .btn:hover {
+  background-color: aliceblue;
+}
+
+
+/* ====== About-me Section ====== */
 
 .about-me {
   position: relative;
@@ -252,7 +294,7 @@ main {
   color: aliceblue;
   font-style: italic;
   padding: 1rem;
-  border-radius: 11px;
+  border-radius: 10px;
   box-shadow: 5px 5px 20px rgb(7, 131, 240);
   width: 250px;
 }
@@ -276,6 +318,8 @@ main {
 }
 .review-input-form legend {
   font-size: 25px;
+  font-weight: bold;
+  color: rgb(7, 131, 240)
 }
 
 
@@ -289,7 +333,7 @@ main {
   max-height: 600px;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 5px 5px 20px rgb(7, 131, 240);
-  border-radius: 5px;
+  border-radius: 10px;
   border:none;
   color:aliceblue;
 }
@@ -322,35 +366,136 @@ main {
   color:aliceblue;
 }
 
-input:invalid {
-  /* Standard: rote Umrandung, kannst du anpassen */
-  border-color: #e74c3c;
-}
-
-input:invalid:focus {
-  /* Optional: beim Fokus weniger auffällig */
-  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
-}
-
-input:invalid ~ .validation-message {
-  opacity: 0.3;           /* Sichtbarkeit stark reduziert */
-  pointer-events: none;    /* Nicht anklickbar */
-  position: absolute;      /* Kann im Hintergrund liegen */
-  z-index: 0;              /* Hinter anderen Elementen */
-}
-
 /*Contact Section */
+
 #contact {
-  background-color: #000;
-  padding: 2rem 1rem;
-  max-width: 960px;
-  margin: 0 auto;
+  position:relative;
+  display:flex;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+.contact_inner_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.contact_cards_wrapper {
+  flex: 1 1 400px;
+  min-width: 300px; 
+  margin-top: 50px;
+  max-width: 400px;
+}
+
+.contact_cards_wrapper h1 {
+  margin-bottom: 0.3rem;  /* kleiner Abstand unter der Überschrift */
+}
+
+.contact_cards_wrapper p {
+  margin-top: 0.1rem;     /* kleiner Abstand zum Icon/Text */
+  margin-bottom: 0.8rem;  /* optional: Abstand zum nächsten Block */
+}
+
+.contact_cards_wrapper i {
+  margin-right: 0.5rem;   /* Abstand zwischen Icon und Text */
+  vertical-align: middle; /* Icon mittig zum Text ausrichten */
+}
+
+
+.contact_cards {
+  display:flex;
+  max-width: 400px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color:aliceblue;
+}
+
+.contact_cards h1 {
+  color:rgb(7, 131, 240);
+}
+
+.contact_input_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Formular linksbündig */
+  justify-content: center;
+  flex: 1 1 400px;
+  max-width: 450px;
+  min-width: 320px;
+  margin-top: 70px;
+  
+}
+
+.contact_input_form legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(7, 131, 240)
+}
+
+.contact_icon img{
+  max-height: 30px;
+  object-fit: cover;
+  border-radius: 50%;  
+}
+
+/*Contact message section */
+
+.contact_input_form input {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 15px;
+  max-height: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(7, 131, 240);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color:aliceblue;
+}
+
+.contact_input_form textarea {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 100px;
+  max-height: 200px;
+  font-size: 14px;
+  resize: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(7, 131, 240);
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color:aliceblue;
+}
+
+.contact_input_form fieldset {
+  display:flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  max-height: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 20px rgb(7, 131, 240);
+  border-radius: 10px;
+  border:none;
+  color:aliceblue;
+}
 
 /* ====== Buttons ====== */
+
 button {
   margin-top: 10px;
   padding: 0.3rem 1.2rem;

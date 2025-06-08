@@ -19,6 +19,7 @@
 
   <header id="navdiv">
     <nav class="topdiv">
+      <a class="topmenu" href="#" onclick="showSection('home')">Home</a>
       <a class="topmenu" href="#" onclick="showSection('about-me')">About-Me</a>
       <a class="topmenu" href="#" onclick="showSection('projects')">Projects</a>
       <a class="topmenu" href="#" onclick="showSection('reviews')">Reviews</a>
@@ -29,16 +30,34 @@
   <!-- Main content of the portfolio page with profile section, about me, skills, projects, and contact form -->
 
   <main>
-    <section id="about-me" style="display: block;">
+
+      <!--Home -->
+
+    <section id="home" class="home-section" style="display: block;">
+      <div class="home-content">
+      <h1>Welcome to my portfolio</h1>
+      <p>
+      I'm Heiko Ries – aspiring back-end developer and clean code enthusiast.  
+      On this page, you'll find a selection of my skills, projects and my journey  
+      toward becoming a full-stack developer with Node.js, Express, and modern JavaScript.
+      </p>
+      <a href="#" class="btn" onclick="showSection('projects')">View My Projects</a>
+      </div>
+    </section>
+
+    <!--About-me -->
+
+    <section id="about-me" style="display: none;">
       <div class="about-me">
       <img src="html_finalprojimages/profil.JPEG" alt="Profilbild Heiko Ries" class="profile_image">
         <div class="about-me-text">
         <h1 >Hi, I'm Heiko Ries</h1>
-        <p>I'm on my way to become an IBM Backend Developer with a passion for full-stack development and clean code.</p> 
+        <p>I’m a backend-focused web developer with a passion for building efficient APIs, clean code, and full-stack solutions using Node.js, Express, and JavaScript.
+            Currently training through IBM’s backend program to become job-ready and sharp in every layer of modern web development.</p> 
         </div>
       </div>
 
-    <!--Skills -->
+    <!--About-me - Skills -->
     
       <div id="all_skills">
         <div id="skills_header">
@@ -65,8 +84,7 @@
 
     <!--Projects section -->
 
-    <section id="projects" style="display: none;">
-      <h2>Projects</h2>
+    <section id="projects" style="display: none;">  
       <div class="projects-container">
         <div class="project-card">
           <h3>Portfolio Website</h3>
@@ -133,21 +151,58 @@
     <!-- Contact section with a form to send messages -->
 
     <section id="contact" style="display: none;">
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Contact</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+      <div class="contact_inner_wrapper">
+        <div class="contact_cards_wrapper">   
+          <div class="contact_cards">
+            <div class="contact_icon">
+            <img src="html_finalprojimages/address_icon.png"  alt="address">
+            </div>
+            <h1>Address:</h1>
+            <p>Contactstreet 12<br>
+              12345 Contact    <br>
+              Deutschland
+            </p>
+          </div>
 
-          <label for="new_recommendation">Message:</label>
-          <textarea id="new_recommendation" name="message" rows="5" required></textarea>
+          <div class="contact_cards">
+            <div class="contact_icon">
+            <img src="html_finalprojimages/phone_icon.png"   alt="phone">
+            </div>
+            <h1>Phone:</h1>
+            <p>+4912355321
+            </p>
+          </div>
 
-          <button onclick="addRecommendation()" type="submit">Send</button>
-        </fieldset>
-      </form>
+          <div class="contact_cards">
+            <div class="contact_icon">
+            <img src="html_finalprojimages/mail_icon.png"   alt="mail">
+            </div>
+            <h1>Email:</h1>
+            <p>portfolio@mail.de
+            </p>
+          </div>
+        </div>
+        
+
+        
+          <form class="contact_input_form" >
+          <fieldset>
+            <legend>Message</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="new_message">Message:</label>
+            <textarea id="new_message" name="review" rows="4"></textarea>
+
+            <button onclick="addReview(event)" type="submit">Send</button>
+          </fieldset>
+          </form>
+      </div>
+
     </section>
 
     <!--Sidebar-->
