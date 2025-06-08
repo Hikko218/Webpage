@@ -1,4 +1,15 @@
 
+// Nav-bar and section management 
+
+function showSection(sectionId) {
+  const sections = document.querySelectorAll("#about-me, #projects, #reviews, #contact");
+  sections.forEach(section => section.style.display = "none");
+  
+  const active = document.getElementById(sectionId);
+  if (active) active.style.display = "block";
+}
+
+
  // addRecommendation function
 
 function addRecommendation() {

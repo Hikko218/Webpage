@@ -19,30 +19,28 @@
 
   <header id="navdiv">
     <nav class="topdiv">
-      <a class="topmenu" href="#about-me">About-Me</a>
-      <a class="topmenu" href="#projects">Projects</a>
-      <a class="topmenu" href="#recommendations">Reviews</a>
-      <a class="topmenu" href="#contact">Contact</a>
+      <a class="topmenu" href="#" onclick="showSection('about-me')">About-Me</a>
+      <a class="topmenu" href="#" onclick="showSection('projects')">Projects</a>
+      <a class="topmenu" href="#" onclick="showSection('reviews')">Reviews</a>
+      <a class="topmenu" href="#" onclick="showSection('contact')">Contact</a>
     </nav>
   </header>
 
   <!-- Main content of the portfolio page with profile section, about me, skills, projects, and contact form -->
 
   <main>
-    <section class="profile-section">
-      <div id="about-me">
+    <section id="about-me" >
+      <div class="about-me">
       <img src="html_finalprojimages/profil.JPEG" alt="Profilbild Heiko Ries" class="profile_image">
         <div class="about-me-text">
         <h1 >Hi, I'm Heiko Ries</h1>
         <p>I'm on my way to become an IBM Backend Developer with a passion for full-stack development and clean code.</p> 
         </div>
       </div>
-    </section>
 
-    <!--Skills section with three skill cards-->
-
-    <section id="skills">
-      <div class="all_skills">
+    <!--Skills -->
+    
+      <div id="all_skills">
         <div id="skills_header">
         <h2>Skills</h2>
         </div> 
@@ -65,7 +63,7 @@
       </div>
     </section>
 
-    <!--Projects section with two project cards-->
+    <!--Projects section -->
 
     <section id="projects" style="display: none;">
       <h2>Projects</h2>
@@ -74,31 +72,36 @@
           <h3>Portfolio Website</h3>
           <ul>
             <li>Frontend with HTML/CSS/JS</li>
-            <li>Feedback section (client-side only)</li>
+            <li>Feedback/Contact section (client-side only)</li>
+            <li>Dynamic DOM rendering using JavaScript</li>
+            <li>Popup message on button interaction</li>
           </ul>
         </div>
       </div>
 
       <div class="projects-container">
         <div class="project-card">
-          <h3>Weather App</h3>
+          <h3>Travel_Homepage</h3>
           <ul>
-            <li>Frontend with HTML/CSS/JS</li>
-            <li>API integration for weather data</li>
+            <li>Real-time search with partial keyword matching</li>
+            <li>Category-based results (e.g. typing "beach" shows all beach destinations)</li>
+            <li>Dynamic DOM rendering using JavaScript</li>
+            <li>Clean and responsive layout with HTML, CSS (Flexbox), and vanilla JS</li>
+            <li>Popup message on button interaction</li>
+            <li>Fully styled background using background-size: cover</li>
+            <li>Input normalization for better user experience (case-insensitive, space-tolerant)</li>
           </ul>
         </div>
 
 
     </section>
 
-    <!-- Contact section with a form to send messages -->
+    <!-- Reviews -->
 
-    <!-- Recommendations -->
-    <section id="recommendations" style="display: none;">
-      <h2>Recommendations</h2>
+    <section id="reviews" style="display: none;">
       <div style="clear:both;"></div>
-      <div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
+      <div class="all_reviews" id="all_reviews">
+        <div class="review">
           <span>&#8220;</span>
           There may be future recommendations here
           <span>&#8221;</span>
@@ -108,12 +111,12 @@
       </div>
     </section>
 
-
+    <!-- Contact section with a form to send messages -->
 
     <section id="contact" style="display: none;">
       <form action="#" method="post">
         <fieldset>
-          <legend>Recommendations</legend>
+          <legend>Contact</legend>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
 
@@ -127,7 +130,7 @@
         </fieldset>
       </form>
     </section>
-   
+
     <!--Sidebar-->
    
     <section id="sidebarContent">
