@@ -1,5 +1,5 @@
 
-/* ====== Global Styles ====== */
+/* Global Styles */
 
 html, body {
   min-height: 100%; 
@@ -7,22 +7,23 @@ html, body {
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: url("html_finalprojimages/background_img.jpg");
-  background-size: cover;       
-  background-position: center;   
-  background-repeat: no-repeat;                           
+  background-size: cover;                       /* Scale background image to cover entire area */
+  background-position: center;                  /* Center the background image */
+  background-repeat: no-repeat;                 /* Prevent background repetition */ 
+  background-attachment: scroll;                   
 }
 
 body {
+  position: relative;
   display: flex;                                /* Flexbox for layout */
-  flex-direction: column;                       /* Column layout */
-  position: relative;                           /* Relative positioning for overlay */
+  flex-direction: column; 
+  z-index: 0;                      
 }
 
 main {
     margin-top: 50px;                           /*Content after Header*/
     flex: 1;                                    /* Allow main to grow and fill available space */
-    min-height: 1000px;                         /* Ensure main has a minimum height */
-    
+    min-height: 1000px;                         /* Ensure main has a minimum height */  
 }
 
 .overlay {
@@ -31,19 +32,18 @@ main {
   left: 0;                                      /* Start from the left */
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); 
+  background: rgba(0, 0, 0, 0.4);             /* Semi-transparent black overlay */
   z-index: 0;                                   /* Ensure it is behind other content */
 }
-
 
 /* Sidebar*/
 
 .sidebar {
     position: fixed;
-    top: 50px;                                              
-    left: -20px;                                             
+    top: 50px;                                  /* Below header */                                    
+    left: -20px;                                /* Slightly outside left */             
     width: 100px;                                           
-    height: calc(100% - 50px);                                                                               
+    height: calc(100% - 50px);                  /* Full height minus header */                                                            
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -65,7 +65,7 @@ main {
     border-radius: 50%;   
 }
 
-/* ====== Navigation Header====== */
+/* Navigation Header= */
 
 #navdiv {
   display: flex;
@@ -76,9 +76,9 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;                               /* Header height */
+  height: 50px;                                   /* Header height */
   width: 100%;
-  z-index: 1000;
+  z-index: 1000;                                  /* Stay on top */
 }
 
 .topdiv {
@@ -92,7 +92,7 @@ main {
   color: rgb(7, 131, 240);
   font-weight: bold;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s;                                /* Smooth hover */
 }
 
 .topmenu:hover {
@@ -101,7 +101,7 @@ main {
   cursor: default;
 }
 
-/* ====== Home Section====== */
+/* Home Section */
 
 .home-section {
   position:relative;
@@ -142,8 +142,7 @@ main {
   background-color: aliceblue;
 }
 
-
-/* ====== About-me Section ====== */
+/* About-me Section */
 
 .about-me {
   position: relative;
@@ -181,7 +180,8 @@ main {
   border-radius: 20px;
 }
 
-/* ====== Skills Section ====== */
+/* Skills Section  */
+
 #all_skills {
   position: relative;
   display: flex;
@@ -195,7 +195,8 @@ main {
   border-radius: 20px;
   box-shadow: 5px 5px 20px rgb(7, 131, 240);
   min-height: 200px;
-  min-width: 800px;
+  width: 90%;
+  max-width: 1000px;
 }
 
 #skills_header {
@@ -215,7 +216,7 @@ main {
   box-shadow: 5px 5px 20px rgb(7, 131, 240);
   flex: 1 1 180px;
   min-width: 120px;
-  max-width:180px;
+  max-width: 180px;
   min-height: 200px;
   display: flex;
   flex-direction: column;
@@ -231,13 +232,12 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.skills p {
-  font-size: 0.9rem;
-  color: gray;
-  margin: 0;
+.skill h3 {
+  color:rgb(7, 131, 240);
 }
 
-/* ====== Projects ====== */
+/* Projects */
+
 .projects-container {
   display: flex;
   justify-content: center;
@@ -264,13 +264,13 @@ main {
 }
 
 .project-card ul {
-  list-style-position: inside; /* <-- important for central points */
+  list-style-position: inside;                                /* <-- important for central points */
   padding: 0;
   margin: 1rem auto 0;
   text-align: left;
 }
 
-/* ====== Reviews ====== */
+/* Reviews */
 
 #reviews {
   display: flex;
@@ -307,7 +307,7 @@ main {
 
 /*Review input */
 
-#review-input-form {
+#review_input_form {
   position: relative;
   display: flex;
   justify-content: center; 
@@ -316,14 +316,13 @@ main {
   z-index: 1;
   
 }
-.review-input-form legend {
+.review_input_form legend {
   font-size: 25px;
   font-weight: bold;
   color: rgb(7, 131, 240)
 }
 
-
-.review-input-form fieldset {
+.review_input_form fieldset {
   display:flex;
   justify-content: center; 
   flex-direction: column;
@@ -338,7 +337,7 @@ main {
   color:aliceblue;
 }
 
-.review-input-form input {
+.review_input_form input {
   min-width: 400px;
   max-width: 400px;
   min-height: 15px;
@@ -352,7 +351,7 @@ main {
   color:aliceblue;
 }
 
-.review-input-form textarea {
+.review_input_form textarea {
   min-width: 400px;
   max-width: 400px;
   min-height: 100px;
@@ -398,19 +397,18 @@ main {
 }
 
 .contact_cards_wrapper h1 {
-  margin-bottom: 0.3rem;  /* kleiner Abstand unter der Überschrift */
+  margin-bottom: 0.3rem;                  /* smaller gap to headline */
 }
 
 .contact_cards_wrapper p {
-  margin-top: 0.1rem;     /* kleiner Abstand zum Icon/Text */
-  margin-bottom: 0.8rem;  /* optional: Abstand zum nächsten Block */
+  margin-top: 0.1rem;                     /* smaller gap to icon/text */
+  margin-bottom: 0.8rem;                  /* gap to next Block */
 }
 
 .contact_cards_wrapper i {
-  margin-right: 0.5rem;   /* Abstand zwischen Icon und Text */
-  vertical-align: middle; /* Icon mittig zum Text ausrichten */
+  margin-right: 0.5rem;                   /* gap between Icon and text */
+  vertical-align: middle;                 /* icon position central to text */
 }
-
 
 .contact_cards {
   display:flex;
@@ -428,13 +426,12 @@ main {
 .contact_input_form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;  /* Formular linksbündig */
+  align-items: flex-start;                  
   justify-content: center;
   flex: 1 1 400px;
   max-width: 450px;
   min-width: 320px;
-  margin-top: 70px;
-  
+  margin-top: 70px; 
 }
 
 .contact_input_form legend {
@@ -494,7 +491,7 @@ main {
   color:aliceblue;
 }
 
-/* ====== Buttons ====== */
+/* Buttons */
 
 button {
   margin-top: 10px;
@@ -514,7 +511,7 @@ button:hover {
   background-color: aliceblue;
 }
 
-/* ====== Popup ====== */
+/* Popup */
 .popup {
   position: relative;
   width: 90%;
@@ -539,7 +536,7 @@ button:hover {
   border-radius: 50%;
 }
 
-/* footer*/
+/* footer */
 
 footer {
     position: fixed;
@@ -560,31 +557,134 @@ footer {
     font-weight: bold;    
 }
 
-/* ====== Responsive Styles ====== */
-@media (max-width: 768px) {
-  .topdiv {
+/*  Responsive Styles */
+
+/* Stack header nav items and center them on medium screens */
+
+@media (max-width: 1024px) {
+  header {
     flex-direction: column;
     align-items: center;
   }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 
-  .profile-section {
+/* Adjust font size and layout for tablets */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .about-me {
     flex-direction: column;
-  }
-
-  .profile_image {
-    max-width: 120px;
-  }
-
-  h1, h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
+    align-items: center;
     text-align: center;
+    padding: 2rem 1rem;
+  }
+  .about-me img {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  #all_skills {
+    flex-direction: column;
+    align-items: center;
+    min-width: unset;
   }
 
   .skill {
     width: 80%;
+    max-width: 300px;
+  }
+
+  .projects-container {
+    gap: 2rem;
+  }
+
+  .contact_inner_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+
+
+  .contact_cards_wrapper,
+  .contact_input_form {
+    align-items: center;                       /* Center content */
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+  }
+
+   .contact_cards_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;                      /* Center contact info horizontally */
+    text-align: center;                       /* Center text in contact info */                                
+  }
+
+  .contact_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;                       /* Center each card's content */
+    justify-content: center;
+    max-width: 500px;                          /* same width as message form */
+    margin: 0 auto;
+  }
+
+  .review-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-input-form,
+  .review-list {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
   }
 }
+
+/* Mobile adjustments: smaller text and buttons */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  p,
+  li {
+    font-size: 0.9rem;
+  }
+
+  .btn,
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Fullscreen background image using pseudo-element to avoid iOS background issues */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("html_finalprojimages/background_img.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;                                         
+  background-position: center;                                         
+  z-index: -1;                                                          
+}
+
