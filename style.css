@@ -241,6 +241,8 @@ main {
 .projects-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
